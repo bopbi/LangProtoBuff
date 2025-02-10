@@ -109,12 +109,5 @@ abstract class Json2Pb : DefaultTask() {
         // Deserialize Protobuf Binary back
         val deserializedProto = DynamicMessage.parseFrom(translationListDescriptor, binaryData)
         println("🔄 Deserialized Protobuf Message: $deserializedProto")
-
-
-//        val structBuilder = Struct.newBuilder()
-//        JsonFormat.parser().ignoringUnknownFields().merge(formattedJson, structBuilder)
-//        val protoData = structBuilder.build().toByteArray()
-//        Files.write(Paths.get(outputProtoPath), protoData)
-//        println("Converted JSON to ProtoBuf: $outputProtoPath")
     }
 }
