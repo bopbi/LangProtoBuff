@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+option java_package = "com.example.protobuf"; // Change to your package name
+option java_multiple_files = true;
+
+message Translation {
+    string name = 1;
+    string en = 2;
+    string id = 3;
+}
+
+message TranslationList {
+    repeated Translation translations = 1;
+}
